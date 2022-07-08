@@ -3,6 +3,8 @@
 An unofficial **cloned** gogoanime api Library for Python where you can get free Dubbed and Subbed Download Links of almost all Anime.
 The Default Dubbed anime Language is English.
 
+# Note :- This is the original work of [Team Scenario](https://github.com/TeamScenario/GoGoAnimeAPI), we just cloned the API and made convenient for us to use this API.
+
 ## Installation
 ```$ pip3 install gogoanime-api```
 
