@@ -87,4 +87,108 @@ Likewise, You can get any details mentioned above for your app.
 'StreamSB': 'https://streamsb.net/d/xf1j1hoaz5c2.html', 
                         
                         'StreamTape': 'https://streamtape.com/v/yV1vLdYe3MF18Xe/tonikaku-kawaii-dub-episode-3.mp4', 
-                                                                     
+                    'DoodStream': 'https://dood.to/d/x8mdw63d6knl'
+                            }
+```
+####
+You can get the links seperately by using ".get" method as above.
+### 5. Browsing Anime by Genre:
+Availabe Genres:
+
+* action                                
+* adventure
+* cars
+* comedy
+* dementia
+* demons
+* drama
+* dub
+* ecchi
+* fantasy
+* game
+* harem
+* hentai - Temporarily Unavailable
+* historical
+* horror
+* josei
+* kids
+* magic
+* martial-arts
+* mecha
+* military
+* music
+* mystery
+* parody
+* police
+* psychological
+* romance
+* samurai
+* school
+* sci-fi
+* seinen
+* shoujo
+* shoujo-ai
+* shounen-ai
+* shounen
+* slice-of-life
+* space
+* sports
+* super-power
+* supernatural
+* thriller
+* vampire
+* yaoi
+* yuri
+
+```browse_genre = anime.get_by_genre(genre_name="action", page=1)```
+###
+#### This will return a list of dictionaries containing all anime under specified Genre with page.
+```
+[
+    {'genre': 'action'}, 
+    [
+        {'title': 'Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu. II', 'animeid': 'itai-no-wa-iya-nano-de-bougyoryoku-ni-kyokufuri-shitai-to-omoimasu-ii'}, 
+        {'title': 'Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka IV', 'animeid': 'dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-iv'}, 
+        {'title': 'Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram', 'animeid': 'fategrand-order-shinsei-entaku-ryouiki-camelot-2-paladin-agateram'}, 
+        {'title': 'Tokyo Revengers', 'animeid': 'tokyo-revengers'}, {'title': 'Edens Zero', 'animeid': 'edens-zero'}, 
+        {'title': 'Subarashiki Kono Sekai The Animation', 'animeid': 'subarashiki-kono-sekai-the-animation'}, 
+        {'title': 'Mars Red', 'animeid': 'mars-red'}, 
+        {'title': 'Boku no Hero Academia 5th Season', 'animeid': 'boku-no-hero-academia-5th-season'}, 
+        {'title': 'B: The Beginning Succession', 'animeid': 'b-the-beginning-succession'}, 
+        {'title': 'SSSS.Dynazenon', 'animeid': 'ssss-dynazenon'}, 
+        {'title': 'Hortensia Saga (TV)', 'animeid': 'hortensia-saga-tv'}, 
+        {'title': 'Kemono Jihen', 'animeid': 'kemono-jihen'}, 
+        {'title': '100-man no Inochi no Ue ni Ore wa Tatteiru 2nd Season', 'animeid': '100-man-no-inochi-no-ue-ni-ore-wa-tatteiru-2nd-season'}, 
+        {'title': 'Log Horizon: Entaku Houkai', 'animeid': 'log-horizon-entaku-houkai'}, 
+        {'title': 'Majutsushi Orphen Hagure Tabi: Kimluck-hen', 'animeid': 'majutsushi-orphen-hagure-tabi-kimluck-hen'}, 
+        {'title': 'Nanatsu no Taizai: Fundo no Shinpan', 'animeid': 'nanatsu-no-taizai-fundo-no-shinpan'}, 
+        {'title': 'Genjitsu Shugi Yuusha no Oukoku Saikenki', 'animeid': 'genjitsu-shugi-yuusha-no-oukoku-saikenki'}, 
+        {'title': 'Ore dake Haireru Kakushi Dungeon', 'animeid': 'ore-dake-haireru-kakushi-dungeon'}, 
+        {'title': 'Shuumatsu no Walküre', 'animeid': 'shuumatsu-no-walkure'}, 
+        {'title': 'Project Scard: Praeter no Kizu', 'animeid': 'project-scard-praeter-no-kizu'}
+    ]
+        ]
+```
+The last page number can't be detected because, I have no resources about that.
+
+### 4. Error Handling
+#### gogoanimeapi libraryhas some error handlers.
+#### 1. Error - 404
+If the host device does not connected to Internet, The following error will be thrown up.
+
+```{'status': '404', 'reason': 'Check the host's network Connection'}```
+#### 2. Error - 204
+This error occurs when no results found for a search query.
+
+```{'status': '204', 'reason': 'No search results found for the query'}```
+#### 3. Error - 400
+This error occurs when the user entered an incorrect data.
+
+```{'status': '400', 'reason': 'Invalid animeid'}```
+
+```{'status': '400', 'reason': 'Invalid animeid or episode_num'}```
+
+```{'status': '400', 'reason': 'Invalid genre_name or page_num'}```
+
+### Licensed under MIT License.,
+                                                 
