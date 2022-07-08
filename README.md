@@ -1,0 +1,2 @@
+# GoGoAnimeAPI
+Unofficial cloned GogoAnimeAPI 
