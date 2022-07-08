@@ -190,5 +190,5 @@ This error occurs when the user entered an incorrect data.
 
 ```{'status': '400', 'reason': 'Invalid genre_name or page_num'}```
 
-### Licensed under MIT License.,
+
                                                  
